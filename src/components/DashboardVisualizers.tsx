@@ -526,7 +526,7 @@ export const KabupatenVerticalBarChart: React.FC<KabupatenVerticalBarChartProps>
                       {item.name}
                     </span>
                     {item.area > 0 && (
-                      <span className="text-[9px] text-slate-400 font-mono block mt-0.5 whitespace-nowrap">
+                      <span className="text-[11px] text-slate-400 font-mono block mt-0.5 whitespace-nowrap">
                         {Math.round(item.area).toLocaleString('id-ID')} HA
                       </span>
                     )}
@@ -597,7 +597,7 @@ export const TrenTahunChart: React.FC<TrenTahunChartProps> = ({ data }) => {
                 {/* Peak indicator / Count */}
                 <div className="flex flex-col items-center mb-1.5">
                   {isPeak && (
-                    <span className="text-[9px] font-bold px-1.5 py-0.2 rounded bg-amber-500 text-slate-950 uppercase tracking-tighter mb-0.5">
+                    <span className="text-[11px] font-bold px-1.5 py-0.2 rounded bg-amber-500 text-slate-950 uppercase tracking-tighter mb-0.5">
                       Puncak
                     </span>
                   )}
