@@ -622,8 +622,17 @@ export const Dashboard = ({
 
       {/* Row 3: Tren Penerbitan Izin Per Tahun & Komoditas Tambang Terbanyak */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        {/* 5. Tren Penerbitan Izin Per Tahun */}
-        <TrenTahunChart data={stats.yearList} />
+        {/* 5. Tren Penerbitan Izin Per Tahun (Line & Dot Chart) */}
+        <TrenTahunChart
+          data={stats.yearList}
+          selectedYear={filters.year ? Number(filters.year) : null}
+          onSelectYear={(yr) => {
+            setFilters({
+              ...filters,
+              year: filters.year === String(yr) ? '' : String(yr)
+            });
+          }}
+        />
 
         {/* 6. Komoditas Tambang Terbanyak (Horizontal Bar Chart) */}
         <KomoditasHorizontalBarChart
